@@ -82,9 +82,9 @@ function emptyCart() {
 
 // Function to handle payment
 function pay(amount) {
-    const total = cartTotal();
+    const total = cartTotal(); // Calculate the cart's total
+    const remainingBalance = total - totalPaid - amount; // Calculate remaining balance after this payment
     totalPaid += amount; // Update the total amount paid
-    const remainingBalance = total - totalPaid; // Calculate the remaining balance
     return remainingBalance;
 }
 
